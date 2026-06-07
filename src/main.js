@@ -234,4 +234,9 @@ async function initPage() {
   await loadArticles()
 }
 
+supabase.auth.onAuthStateChange(async () => {
+  await checkUser()
+  await loadArticles()
+})
+
 initPage()
