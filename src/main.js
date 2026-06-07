@@ -229,5 +229,9 @@ closeModalBtn.addEventListener('click', () => {
 
 articleForm.addEventListener('submit', saveArticle)
 
-await checkUser()
-await loadArticles()
+async function initPage() {
+  await checkUser()
+  await loadArticles()
+}
+
+initPage()
