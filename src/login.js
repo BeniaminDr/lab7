@@ -25,5 +25,5 @@ loginForm.addEventListener('submit', async (event) => {
     return
   }
 
-  window.location.replace('./index.html')
+  window.location.href = './index.html'
 })
