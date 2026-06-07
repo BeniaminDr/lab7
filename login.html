@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logowanie</title>
+    <script type="module" src="/src/login.js"></script>
+  </head>
+
+  <body class="bg-slate-100 text-slate-900">
+    <main class="min-h-screen flex items-center justify-center p-4">
+      <section class="bg-white p-6 rounded-lg shadow w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-4">Logowanie</h1>
+
+        <form id="loginForm" class="grid gap-4">
+          <input id="emailInput" type="email" class="border p-2 rounded" placeholder="Email" required />
+          <input id="passwordInput" type="password" class="border p-2 rounded" placeholder="Hasło" required />
+
+          <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+            Zaloguj
+          </button>
+        </form>
+
+        <p id="errorMessage" class="text-red-600 mt-4"></p>
+
+        <a href="/index.html" class="block mt-4 text-blue-600 hover:underline">
+          Wróć na stronę główną
+        </a>
+      </section>
+    </main>
+  </body>
+</html>
