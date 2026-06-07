@@ -6,7 +6,7 @@ export default defineConfig(({ command }) => ({
   base: command === 'build' ? '/lab7/' : '/',
   plugins: [tailwindcss()],
   build: {
-    target: ['es2022', 'chrome87', 'edge88', 'firefox78', 'safari14'],
+    target: 'es2022',  // Add this line to support top-level await
     rollupOptions: {
       input: {
         main: resolve(process.cwd(), 'index.html'),
