@@ -9,16 +9,21 @@ const errorMessage = document.querySelector('#errorMessage')
 loginForm.addEventListener('submit', async (event) => {
   event.preventDefault()
 
+  errorMessage.textContent = ''
+
+  const email = emailInput.value.trim()
+  const password = passwordInput.value.trim()
+
   const { error } = await supabase.auth.signInWithPassword({
-    email: emailInput.value,
-    password: passwordInput.value,
+    email,
+    password,
   })
 
   if (error) {
-    errorMessage.textContent = 'Nieprawidłowy email lub hasło.'
     console.error(error)
+    errorMessage.textContent = 'Nieprawidłowy email lub hasło.'
     return
   }
 
-  window.location.href = '/index.html'
+  window.location.href = './index.html'
 })
