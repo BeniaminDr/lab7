@@ -202,7 +202,7 @@ async function deleteArticle(id) {
 
 addArticleBtn.addEventListener('click', () => {
   if (!currentUser) {
-    window.location.href = `${import.meta.env.BASE_URL}login.html`
+    window.location.href = './login.html'
     return
   }
 
